@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<None Include="..\..\YeeYeeBo.uproject" />
+		<Filter Include="Source">
+			<UniqueIdentifier>{14A184B4-65F9-40A8-8EAE-AE4184B51F61}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Source\YeeYeeBo.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<None Include="..\..\Source\YeeYeeBoEditor.Target.cs">
+			<Filter>Source</Filter>
+		</None >
+		<Filter Include="Config">
+			<UniqueIdentifier>{801E72A0-DAE2-4C2D-9A1D-264F74246ED3}</UniqueIdentifier>
+		</Filter>
+		<None Include="..\..\Config\DefaultEditor.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultEngine.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultGame.ini">
+			<Filter>Config</Filter>
+		</None >
+		<None Include="..\..\Config\DefaultInput.ini">
+			<Filter>Config</Filter>
+		</None >
+		<Filter Include="Source\YeeYeeBo">
+			<UniqueIdentifier>{9665D2EE-A98A-4516-8885-F7F9E471AD67}</UniqueIdentifier>
+		</Filter>
+		<ClCompile Include="..\..\Source\YeeYeeBo\Tunk.cpp">
+			<Filter>Source\YeeYeeBo</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\YeeYeeBo\Tunk.h">
+			<Filter>Source\YeeYeeBo</Filter>
+		</ClInclude >
+		<None Include="..\..\Source\YeeYeeBo\YeeYeeBo.Build.cs">
+			<Filter>Source\YeeYeeBo</Filter>
+		</None >
+		<ClCompile Include="..\..\Source\YeeYeeBo\YeeYeeBo.cpp">
+			<Filter>Source\YeeYeeBo</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\YeeYeeBo\YeeYeeBo.h">
+			<Filter>Source\YeeYeeBo</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\YeeYeeBo\YeeYeeBoGameModeBase.cpp">
+			<Filter>Source\YeeYeeBo</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\YeeYeeBo\YeeYeeBoGameModeBase.h">
+			<Filter>Source\YeeYeeBo</Filter>
+		</ClInclude >
+	</ItemGroup>
+</Project>
