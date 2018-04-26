@@ -15,6 +15,9 @@
 #include "GameFramework/PawnMovementComponent.h"
 #include "WheeledVehicleMovementComponent.h"
 #include "WheeledVehicle.h"
+#include "Shell.h"
+#include "Test.h"
+#include "Engine.h"
 
 #include <vector>
 #include <iostream>
@@ -29,7 +32,7 @@ ATunk::ATunk(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitiali
 	
 	Root = CreateDefaultSubobject<USceneComponent>("Root");
 
-	UWheeledVehicleMovementComponent* Movement = CastChecked<UWheeledVehicleMovementComponent>(this->GetVehicleMovement());
+	//UWheeledVehicleMovementComponent* Movement = CastChecked<UWheeledVehicleMovementComponent>(this->GetVehicleMovement());
 
 	//Creates visible object and camera
 	Body = CreateDefaultSubobject<UStaticMeshComponent>("Body");
@@ -47,8 +50,8 @@ ATunk::ATunk(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitiali
 	Body->SetSimulatePhysics(true);
 	AutoPossessPlayer = EAutoReceiveInput::Player0;
 
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> ttest(TEXT("StaticMesh'/Game/models/ttest.FBX'"));
-	UStaticMesh* TLink = ttest.Object;
+	//static ConstructorHelpers::FObjectFinder<UStaticMesh> ttest(TEXT("StaticMesh'/Game/models/ttest.FBX'"));
+	//UStaticMesh* TLink = ttest.Object;
 
 	Camera = CreateDefaultSubobject<UCameraComponent>("Camera");
 	SArm = CreateDefaultSubobject<USpringArmComponent>("Spring Arm");
@@ -70,9 +73,14 @@ ATunk::ATunk(const FObjectInitializer& ObjectInitializer) : Super(ObjectInitiali
 	Cannon->AttachToComponent(Turret, FAttachmentTransformRules::KeepRelativeTransform, "cannon");
 	TSpline->SetupAttachment(LWheel);
 
+	MuzzleLoc = CreateDefaultSubobject<USceneComponent>(TEXT("MuzzleLocation"));
+	MuzzleLoc->SetupAttachment(Cannon);
+	MuzzleLoc->SetRelativeLocation(FVector(0.0f, 0.0f, 0.0f));
+
+	GunOffset = FVector(100.0f, 0.0f, 10.0f);
+
 	FRotator TTargetRot = FRotator(0.0f, 0.0f, 0.0f);
 
-	Movement->WheelSetups[0].WheelClass = UVehicleWheel::StaticClass();
 	/*numPlates = 3;
 	currLen = 0.0;
 	length = TSpline->GetSplineLength();
@@ -213,6 +221,8 @@ void ATunk::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 	PlayerInputComponent->BindAction("ZoomIn", IE_Pressed, this, &ATunk::ZoomIn);
 	PlayerInputComponent->BindAction("ZoomIn", IE_Released, this, &ATunk::ZoomOut);
+
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &ATunk::Fire);
 }
 
 
@@ -250,4 +260,24 @@ void ATunk::ZoomIn()
 void ATunk::ZoomOut()
 {
 	Zoomed = false;
+}
+
+void ATunk::Fire()
+{
+	UWorld* const World = GetWorld();
+	if (World != NULL)
+	{
+		FActorSpawnParameters ActorSpawnParams;
+		ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
+
+		const FRotator SpawnRotation = FRotator(-Cannon->RelativeRotation.Roll - Body->RelativeRotation.Roll, Turret->RelativeRotation.Yaw + Body->RelativeRotation.Yaw, 0.0f);
+		const FVector SpawnLocation = ((MuzzleLoc != nullptr) ? MuzzleLoc->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
+
+		AShell* Shell = World->SpawnActor<AShell>(SpawnLocation, SpawnRotation, ActorSpawnParams);
+		if (Shell)
+		{
+			FVector FireDirection = SpawnRotation.Vector();
+			Shell->InitVelocity(FireDirection);
+		}
+	}
 }

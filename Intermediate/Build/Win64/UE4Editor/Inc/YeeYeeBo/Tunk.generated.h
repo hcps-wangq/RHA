@@ -13,9 +13,9 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define YEEYEEBO_Tunk_generated_h
 
-#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_RPC_WRAPPERS
-#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_RPC_WRAPPERS_NO_PURE_DECLS
-#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_INCLASS_NO_PURE_DECLS \
+#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_RPC_WRAPPERS
+#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_RPC_WRAPPERS_NO_PURE_DECLS
+#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATunk(); \
 	friend YEEYEEBO_API class UClass* Z_Construct_UClass_ATunk(); \
@@ -25,7 +25,7 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_INCLASS \
+#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_INCLASS \
 private: \
 	static void StaticRegisterNativesATunk(); \
 	friend YEEYEEBO_API class UClass* Z_Construct_UClass_ATunk(); \
@@ -35,9 +35,9 @@ public: \
 	enum {IsIntrinsic=COMPILED_IN_INTRINSIC};
 
 
-#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_STANDARD_CONSTRUCTORS \
+#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API ATunk(const FObjectInitializer& ObjectInitializer); \
+	NO_API ATunk(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATunk) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ATunk); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATunk); \
@@ -48,7 +48,7 @@ private: \
 public:
 
 
-#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_ENHANCED_CONSTRUCTORS \
+#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ATunk(ATunk&&); \
@@ -56,32 +56,32 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, ATunk); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(ATunk); \
-	DEFINE_DEFAULT_CONSTRUCTOR_CALL(ATunk)
+	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(ATunk)
 
 
-#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_PRIVATE_PROPERTY_OFFSET \
+#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__SArm() { return STRUCT_OFFSET(ATunk, SArm); }
 
 
-#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_14_PROLOG
-#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_GENERATED_BODY_LEGACY \
+#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_15_PROLOG
+#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_PRIVATE_PROPERTY_OFFSET \
-	YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_RPC_WRAPPERS \
-	YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_INCLASS \
-	YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_STANDARD_CONSTRUCTORS \
+	YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_PRIVATE_PROPERTY_OFFSET \
+	YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_RPC_WRAPPERS \
+	YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_INCLASS \
+	YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_GENERATED_BODY \
+#define YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_PRIVATE_PROPERTY_OFFSET \
-	YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_INCLASS_NO_PURE_DECLS \
-	YeeYeeBo_Source_YeeYeeBo_Tunk_h_17_ENHANCED_CONSTRUCTORS \
+	YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_PRIVATE_PROPERTY_OFFSET \
+	YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_INCLASS_NO_PURE_DECLS \
+	YeeYeeBo_Source_YeeYeeBo_Tunk_h_18_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

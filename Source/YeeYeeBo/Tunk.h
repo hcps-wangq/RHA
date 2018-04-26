@@ -8,6 +8,7 @@
 #include "Components/StaticMeshComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "UObject/UObjectGlobals.h"
+#include "Shell.h"
 #include <vector>
 #include "Tunk.generated.h"
 
@@ -43,6 +44,15 @@ public:
 
 	UPROPERTY(EditAnywhere)
 		UStaticMeshComponent* Cannon;
+
+	UPROPERTY(VisibleDefaultsOnly)
+		class USceneComponent* MuzzleLoc;
+
+	UPROPERTY(EditAnywhere)
+		FVector GunOffset;
+
+	UPROPERTY(EditAnywhere, Category = Projectile)
+		TSubclassOf<class AShell> ProjectileClass;
 
 	UPROPERTY(EditAnywhere)
 		UStaticMesh* TLink;
@@ -84,7 +94,8 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	void CreateTread(USplineComponent line, UStaticMeshComponent plate, int numPlates);
+	
+	//void CreateTread(USplineComponent line, UStaticMeshComponent plate, int numPlates);
 
 	UPROPERTY(EditAnywhere)
 	USpringArmComponent* SArm;
@@ -106,4 +117,5 @@ public:
 	void CamY(float AxisValue);
 	void ZoomIn();
 	void ZoomOut();
+	void Fire();
 };

@@ -19,8 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeYeeYeeBo_init() {}
 			static const UE4CodeGen_Private::FPackageParams PackageParams = {
 				"/Script/YeeYeeBo",
 				PKG_CompiledIn | 0x00000000,
-				0x1DC7BAF9,
-				0x1726AC08,
+				0x86B88B66,
+				0xA8125F60,
 				nullptr, 0,
 				METADATA_PARAMS(nullptr, 0)
 			};

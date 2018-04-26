@@ -4,7 +4,7 @@
 	<ItemGroup>
 		<None Include="..\..\YeeYeeBo.uproject" />
 		<Filter Include="Source">
-			<UniqueIdentifier>{14A184B4-65F9-40A8-8EAE-AE4184B51F61}</UniqueIdentifier>
+			<UniqueIdentifier>{68D5AC9B-0544-4DB9-8266-BF0598A5F9B4}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Source\YeeYeeBo.Target.cs">
 			<Filter>Source</Filter>
@@ -13,7 +13,7 @@
 			<Filter>Source</Filter>
 		</None >
 		<Filter Include="Config">
-			<UniqueIdentifier>{801E72A0-DAE2-4C2D-9A1D-264F74246ED3}</UniqueIdentifier>
+			<UniqueIdentifier>{D1620347-6618-43BD-A295-7D595E36116B}</UniqueIdentifier>
 		</Filter>
 		<None Include="..\..\Config\DefaultEditor.ini">
 			<Filter>Config</Filter>
@@ -28,12 +28,30 @@
 			<Filter>Config</Filter>
 		</None >
 		<Filter Include="Source\YeeYeeBo">
-			<UniqueIdentifier>{9665D2EE-A98A-4516-8885-F7F9E471AD67}</UniqueIdentifier>
+			<UniqueIdentifier>{3535C6BA-1441-408E-B70F-98FBD136FEAE}</UniqueIdentifier>
 		</Filter>
+		<ClCompile Include="..\..\Source\YeeYeeBo\Shell.cpp">
+			<Filter>Source\YeeYeeBo</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\YeeYeeBo\Shell.h">
+			<Filter>Source\YeeYeeBo</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\YeeYeeBo\Test.cpp">
+			<Filter>Source\YeeYeeBo</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\YeeYeeBo\Test.h">
+			<Filter>Source\YeeYeeBo</Filter>
+		</ClInclude >
 		<ClCompile Include="..\..\Source\YeeYeeBo\Tunk.cpp">
 			<Filter>Source\YeeYeeBo</Filter>
 		</ClCompile >
 		<ClInclude Include="..\..\Source\YeeYeeBo\Tunk.h">
+			<Filter>Source\YeeYeeBo</Filter>
+		</ClInclude >
+		<ClCompile Include="..\..\Source\YeeYeeBo\Vrum.cpp">
+			<Filter>Source\YeeYeeBo</Filter>
+		</ClCompile >
+		<ClInclude Include="..\..\Source\YeeYeeBo\Vrum.h">
 			<Filter>Source\YeeYeeBo</Filter>
 		</ClInclude >
 		<None Include="..\..\Source\YeeYeeBo\YeeYeeBo.Build.cs">

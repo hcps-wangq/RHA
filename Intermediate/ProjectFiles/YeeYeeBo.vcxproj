@@ -414,8 +414,14 @@
 		<None Include="..\..\Config\DefaultEngine.ini" />
 		<None Include="..\..\Config\DefaultGame.ini" />
 		<None Include="..\..\Config\DefaultInput.ini" />
+		<ClCompile Include="..\..\Source\YeeYeeBo\Shell.cpp" />
+		<ClInclude Include="..\..\Source\YeeYeeBo\Shell.h" />
+		<ClCompile Include="..\..\Source\YeeYeeBo\Test.cpp" />
+		<ClInclude Include="..\..\Source\YeeYeeBo\Test.h" />
 		<ClCompile Include="..\..\Source\YeeYeeBo\Tunk.cpp" />
 		<ClInclude Include="..\..\Source\YeeYeeBo\Tunk.h" />
+		<ClCompile Include="..\..\Source\YeeYeeBo\Vrum.cpp" />
+		<ClInclude Include="..\..\Source\YeeYeeBo\Vrum.h" />
 		<None Include="..\..\Source\YeeYeeBo\YeeYeeBo.Build.cs" />
 		<ClCompile Include="..\..\Source\YeeYeeBo\YeeYeeBo.cpp" />
 		<ClInclude Include="..\..\Source\YeeYeeBo\YeeYeeBo.h" />
